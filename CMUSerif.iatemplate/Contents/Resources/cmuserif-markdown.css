@@ -22,8 +22,8 @@
 
 .markdown-body strong {
   font-weight: inherit;
-    font-family: "CMUSerifBold";
-
+  font-family: "CMUSerifBold";
+  
 }
 
 .markdown-body img {
@@ -72,7 +72,8 @@
 }
 
 .markdown-body a {
-  color: #0366d6;
+  /* color: #0366d6; */
+  color: #777a7e;
   text-decoration: none;
 }
 
@@ -122,8 +123,9 @@
 
 .markdown-body p {
   margin-top: 0;
-  margin-bottom: 10px;
-  text-indent: 50px ;
+  margin-bottom: 0 !important;
+  margin-block-end: 0 !important;
+  text-indent: 60px ;
 } 
 
 .markdown-body i {
@@ -134,12 +136,8 @@
   font-family: "CMUSerifBold";
 }
 
-.markdown-body blockquote {
-  margin: 0;
-}
-
 .markdown-body ul {
-    list-style-type: square;
+  list-style-type: square;
 }
 
 .markdown-body ul,
@@ -233,8 +231,9 @@
 }
 
 .markdown-body blockquote {
-  padding: 1em 1em 1em 1em;
-  color: #6a737d;
+  padding: 1em;
+  margin: 0;
+  color: #777a7e;
   border-top: 1px solid #dfe2e5;
   border-bottom: 1px solid #dfe2e5;
   text-indent: 0;
@@ -242,19 +241,19 @@
 
 .markdown-body blockquote>:first-child {
   margin-top: 0;
-    text-indent: 0;
-
+  text-indent: 0;
+  
 }
 
 .markdown-body blockquote>:last-child {
   margin-bottom: 0;
-    text-indent: 0;
-
+  text-indent: 0;
+  
 }
 
 .markdown-body kbd {
   display: inline-block;
-  padding: 3px 5px;
+  padding: 3px 3px;
   font-size: 11px;
   line-height: 10px;
   color: #444d56;
@@ -342,7 +341,7 @@
 }
 
 .markdown-body table th {
-  font-weight: 600;
+  font-family: "CMUSerifBold";
 }
 
 .markdown-body table th,
