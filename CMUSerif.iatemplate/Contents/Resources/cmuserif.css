@@ -1,0 +1,148 @@
+/* cmuserif-markdown, cmuserif-markdown-mobile are extracted using https://cmuserif.com/sindresorhus/generate-cmuserif-markdown-css */
+/* .pl styles have been removed, because they refer to prettylights syntax highlighter https://cmuserif.com/primer/cmuserif-syntax-theme-generator */
+
+@import 'cmuserif-markdown.css' screen and (min-width: 520px), print;
+
+@import 'cmuserif-markdown-mobile.css' screen and (max-width: 520px);
+
+@import 'cmuserif-markdown-night-mode.css' screen;
+
+@font-face {
+	font-family: 'Computer Modern Serif';
+	src: url('Fonts/cmunrm.eot');
+	src: url('Fonts/cmunrm.eot?#iefix') format('embedded-opentype'),
+		 url('Fonts/cmunrm.woff') format('woff'),
+		 url('Fonts/cmunrm.ttf') format('truetype'),
+		 url('Fonts/cmunrm.svg#cmunrm') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Computer Modern Serif';
+	src: url('Fonts/Fonts/cmunbx.eot');
+	src: url('Fonts/Fonts/cmunbx.eot?#iefix') format('embedded-opentype'),
+		 url('Fonts/Fonts/cmunbx.woff') format('woff'),
+		 url('Fonts/Fonts/cmunbx.ttf') format('truetype'),
+		 url('Fonts/Fonts/cmunbx.svg#cmunbx') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Computer Modern Serif';
+	src: url('Fonts/Fonts/cmunti.eot');
+	src: url('Fonts/Fonts/cmunti.eot?#iefix') format('embedded-opentype'),
+		 url('Fonts/Fonts/cmunti.woff') format('woff'),
+		 url('Fonts/Fonts/cmunti.ttf') format('truetype'),
+		 url('Fonts/Fonts/cmunti.svg#cmunti') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+
+
+@font-face {
+	font-family: 'Computer Modern Serif';
+	src: url('Fonts/Fonts/cmunbi.eot');
+	src: url('Fonts/Fonts/cmunbi.eot?#iefix') format('embedded-opentype'),
+		 url('Fonts/Fonts/cmunbi.woff') format('woff'),
+		 url('Fonts/Fonts/cmunbi.ttf') format('truetype'),
+		 url('Fonts/Fonts/cmunbi.svg#cmunbi') format('svg');
+	font-weight: bold;
+	font-style: italic;
+}
+
+
+
+
+html {
+  background-color: white;
+}
+
+.markdown-body {
+  padding-top: 0;
+  padding-bottom: 0;
+  --horizontal-padding: 0;
+  padding-left: var(--horizontal-padding);
+  padding-right: var(--horizontal-padding);
+}
+
+@supports (padding: constant(safe-area-inset-left)) and (padding: constant(safe-area-inset-right)) {
+  .markdown-body {
+      padding-left: calc(var(--horizontal-padding) + constant(safe-area-inset-left));
+      padding-right: calc(var(--horizontal-padding) + constant(safe-area-inset-right));
+  }
+}
+
+@supports (padding: env(safe-area-inset-left)) and (padding: env(safe-area-inset-right)) {
+  .markdown-body {
+    padding-left: calc(var(--horizontal-padding) + env(safe-area-inset-left));
+    padding-right: calc(var(--horizontal-padding) + env(safe-area-inset-right));
+  }
+}
+
+@media screen {
+  .markdown-body {
+    margin: 0 auto;
+    max-width: calc(980px - 90px);
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .markdown-body {
+    --horizontal-padding: 15px;
+  }
+}
+
+@media screen and (min-width: 520px) {
+  .markdown-body {
+    --horizontal-padding: 45px;
+  }
+}
+
+@media screen {
+  .markdown-body pre {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media print {
+  .markdown-body {
+    --horizontal-padding: 75px;
+  }
+  .markdown-body pre code {
+    white-space: pre-wrap;
+  }
+}
+
+/* Fix for paragraph list items. cmuserif embeds input into the first paragraph, iA Writer doesn’t. */
+.markdown-body .task-list-item {
+  clear: left;
+}
+.markdown-body .task-list-item-checkbox {
+  float: left; /* takes out of flow */
+  height: 1.5rem; /* same as line height */
+}
+
+/* cmuserif doesn't process figures and images aren't given padding */
+.markdown-body figure {
+  -webkit-margin-before: 0em; /* override user-agent styles */
+  -webkit-margin-after: 0em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+
+.markdown-body figcaption {
+	margin-bottom: 16px; /* same as between paragraphs */
+}
+
+.markdown-body img {
+  height: auto;
+}
+
+/* give elements on new pages the same top margin as first element of document */
+.markdown-body .page-break + * {
+  margin-top: 0;
+}
