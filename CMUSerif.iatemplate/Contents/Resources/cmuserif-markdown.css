@@ -11,23 +11,9 @@
   font-variant-ligatures: common-ligatures;
 }
 
-.markdown-body a {
-  background-color: transparent;
-}
-
-.markdown-body a:active,
-.markdown-body a:hover {
-  outline-width: 0;
-}
-
 .markdown-body strong {
   font-weight: inherit;
   font-family: "CMUSerifBold";
-  
-}
-
-.markdown-body img {
-  border-style: none;
 }
 
 .markdown-body svg:not(:root) {
@@ -41,19 +27,13 @@
   font-size: 1em;
 }
 
-.markdown-body hr {
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible;
-}
-
 .markdown-body input {
   font: inherit;
   margin: 0;
-}
-
-.markdown-body input {
   overflow: visible;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .markdown-body [type="checkbox"] {
@@ -65,16 +45,10 @@
   box-sizing: border-box;
 }
 
-.markdown-body input {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-
 .markdown-body a {
-  /* color: #0366d6; */
   color: #777a7e;
   text-decoration: none;
+  background-color: transparent;
 }
 
 .markdown-body a:hover {
@@ -82,12 +56,13 @@
 }
 
 .markdown-body hr {
-  height: 0;
-  margin: 15px 0;
   overflow: hidden;
   background: transparent;
   border: 0;
-  border-bottom: 1px solid #dfe2e5;
+  border-bottom: 1px solid #777a7e;
+  height: 0.25em;
+  padding: 0;
+  margin: 24px 0;
 }
 
 .markdown-body hr::before {
@@ -99,11 +74,6 @@
   display: table;
   clear: both;
   content: "";
-}
-
-.markdown-body table {
-  border-spacing: 0;
-  border-collapse: collapse;
 }
 
 .markdown-body td,
@@ -118,7 +88,6 @@
 .markdown-body h5,
 .markdown-body h6 {
   margin-bottom: 0;
-  font-family: "CMUSerifBold";
 }
 
 .markdown-body p {
@@ -128,7 +97,7 @@
   text-indent: 60px ;
 } 
 
-.markdown-body i {
+.markdown-body i, .markdown-body em {
   font-family: "CMUSerifItalic";
 }
 
@@ -159,14 +128,8 @@
   list-style-type: lower-alpha;
 }
 
-
 .markdown-body dd {
   margin-left: 0;
-}
-
-.markdown-body code {
-  font-family: "CMUTypewriterTextRegular", "FiraCode", "Liberation Mono", Menlo, Courier, monospace;
-  font-size: 12px;
 }
 
 .markdown-body pre {
@@ -174,6 +137,7 @@
   margin-bottom: 0;
   font-family: "CMUTypewriterTextRegular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
   font-size: 12px;
+  word-wrap: normal;
 }
 
 .markdown-body::before {
@@ -222,33 +186,20 @@
   margin-bottom: 16px;
 }
 
-.markdown-body hr {
-  height: 0.25em;
-  padding: 0;
-  margin: 24px 0;
-  background-color: #e1e4e8;
-  border: 0;
-}
-
 .markdown-body blockquote {
   padding: 1em;
-  margin: 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: 1em;
+  margin-right: 1em;
   color: #777a7e;
-  border-top: 1px solid #dfe2e5;
-  border-bottom: 1px solid #dfe2e5;
+  border-top: 1px solid #777a7e;
+  border-bottom: 1px solid #777a7e;
   text-indent: 0;
 }
 
-.markdown-body blockquote>:first-child {
-  margin-top: 0;
+.markdown-body blockquote>:first-child, .markdown-body blockquote>:last-child {
   text-indent: 0;
-  
-}
-
-.markdown-body blockquote>:last-child {
-  margin-bottom: 0;
-  text-indent: 0;
-  
 }
 
 .markdown-body kbd {
@@ -260,9 +211,10 @@
   vertical-align: middle;
   background-color: #fafbfc;
   border: solid 1px #c6cbd1;
-  border-bottom-color: #959da5;
+  border-bottom-color: #777a7e;
   border-radius: 5px;
-  box-shadow: inset 0 -1px 0 #959da5;
+  box-shadow: inset 0 -1px 0 #777a7e;
+  font: 11px "CMUTypewriterTextRegular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 
 .markdown-body h1 {
@@ -272,27 +224,47 @@
   letter-spacing: 2px;
   text-align: center;
   font-size: 1.5em;
+  font-family: "CMUSerifBold";
 }
 
 .markdown-body h2 {
-  font-size: 1.45em;
+  font-family: "CMUSerifBold";
+  font-weight: bolder;
+  font-size: 1em;
 }
 
 .markdown-body h3 {
-  font-size: 1.40em;
+  font-family: "CMUSerifItalic";
+  font-style: italic;
+  font-weight: bolder;
+  font-size: 1em;
 }
 
 .markdown-body h4 {
-  font-size: 1.35em;
+  font-family: "CMUSerifItalic";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1em;
+  text-decoration: underline;
 }
 
 .markdown-body h5 {
-  font-size: 1.30em;
+  font-family: "CMUSerifItalic";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1em;
+  text-decoration: underline;
+  color: #444d56;
+  
 }
 
 .markdown-body h6 {
+  font-family: "CMUSerifItalic";
+  font-style: italic;
+  font-weight: lighter;
   font-size: 1em;
-  color: #6a737d;
+  text-decoration: underline;
+  color: #444d56;
 }
 
 .markdown-body ul,
@@ -335,9 +307,12 @@
 }
 
 .markdown-body table {
-  display: block;
-  width: 100%;
+  width: 80%;
   overflow: auto;
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .markdown-body table th {
@@ -346,23 +321,17 @@
 
 .markdown-body table th,
 .markdown-body table td {
-  padding: 6px 13px;
-  border: 1px solid #dfe2e5;
-}
-
-.markdown-body table tr {
-  background-color: #fff;
-  border-top: 1px solid #c6cbd1;
-}
-
-.markdown-body table tr:nth-child(2n) {
-  background-color: #f6f8fa;
+  padding: 3px 10px;
+  border: 0.5px solid #777a7e;
 }
 
 .markdown-body img {
   max-width: 100%;
   box-sizing: content-box;
   background-color: #fff;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-style: none;
 }
 
 .markdown-body img[align=right] {
@@ -374,6 +343,7 @@
 }
 
 .markdown-body code {
+  font-family: "CMUTypewriterTextRegular", "FiraCode", "Liberation Mono", Menlo, Courier, monospace;
   padding: 0;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
@@ -387,10 +357,6 @@
 .markdown-body code::after {
   letter-spacing: -0.2em;
   content: "\00a0";
-}
-
-.markdown-body pre {
-  word-wrap: normal;
 }
 
 .markdown-body pre>code {
@@ -440,28 +406,14 @@
 }
 
 .markdown-body .full-commit .btn-outline:not(:disabled):hover {
-  color: #005cc5;
-  border-color: #005cc5;
-}
-
-.markdown-body kbd {
-  display: inline-block;
-  padding: 3px 5px;
-  font: 11px "CMUTypewriterTextRegular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  line-height: 10px;
-  color: #444d56;
-  vertical-align: middle;
-  background-color: #fafbfc;
-  border: solid 1px #d1d5da;
-  border-bottom-color: #c6cbd1;
-  border-radius: 5px;
-  box-shadow: inset 0 -1px 0 #c6cbd1;
+  color: #777a7e;
+  border-color: #777a7e;
 }
 
 .markdown-body :checked+.radio-label {
   position: relative;
   z-index: 1;
-  border-color: #0366d6;
+  border-color: #777a7e;
 }
 
 .markdown-body .repo-config-option:not(:checked) ~ .time-remaining {
@@ -479,8 +431,4 @@
 .markdown-body .task-list-item-checkbox {
   margin: 0 0.2em 0.25em -1.6em;
   vertical-align: middle;
-}
-
-.markdown-body hr {
-  border-bottom-color: #eee;
 }
