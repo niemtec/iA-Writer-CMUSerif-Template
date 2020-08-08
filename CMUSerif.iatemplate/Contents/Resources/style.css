@@ -3,11 +3,11 @@ body {
   -webkit-text-size-adjust: 100%;
   line-height: 1.5;
   color: #24292e;
-  font-family: "CMUSerifRoman", "CMU Serif Roman", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "CMUSerifRoman", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
-  line-height: 1.5;
   word-wrap: break-word;
   font-variant-ligatures: common-ligatures;
+  padding: 5em;
 }
 
 strong {
@@ -89,12 +89,12 @@ h6 {
   margin-bottom: 0;
 }
 
-p {
+/* p {
   margin-top: 0;
   margin-bottom: 0 !important;
   margin-block-end: 0 !important;
-  text-indent: 60px ;
-} 
+  text-indent: 60px;
+}  */
 
 i, em {
   font-family: "CMUSerifItalic";
@@ -430,4 +430,14 @@ pre code::after {
 .task-list-item-checkbox {
   margin: 0 0.2em 0.25em -1.6em;
   vertical-align: middle;
+}
+
+.data-date {
+  font-family: "CMUSerifRoman";
+  text-align: right;
+}
+
+.data-page-number {
+  font-family: "CMUSerifRoman";
+  text-align: right;
 }

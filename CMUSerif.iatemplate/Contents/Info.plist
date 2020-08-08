@@ -29,7 +29,7 @@
 	<key>IATemplateDescription</key>
 	<string>CMUSerif template.</string>
 	<key>IATemplateAuthor</key>
-	<string>CMUSerif</string>
+	<string>Jakub A. Niemiec</string>
 	<key>IATemplateAuthorURL</key>
 	<string>https://niemtec.com</string>
 </dict>
